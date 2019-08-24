@@ -1,4 +1,4 @@
-node{
+node('jenkins-slave1'){
     
     stage('clone'){
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a14b9e5e-a271-40ee-be77-eb6595ff5342', url: 'https://github.com/csenapati12/java-tomcat-maven-example.git']]])
