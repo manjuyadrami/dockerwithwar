@@ -9,11 +9,15 @@ node{
         echo "maven build"
     }
     stage('sonar analysis'){
-        sh label: '', script: 'mvn package sonar:sonar'
+      //sh label: '', script: 'mvn package sonar:sonar'
         echo "sonar analysis"
     }
     stage('docker container'){
         echo "docker container"
+        sh """
+        docker build -t myimage1 .
+        docker run -d -p 8831:8080 myimage1
+        """
     }
     stage('Docker Verification'){
         echo "Docker verification"
