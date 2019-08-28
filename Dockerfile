@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN groupadd tomcat
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 RUN cd /tmp
-RUN curl -O http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+RUN curl -O http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.45/bin/apache-tomcat-8.5.45.tar.gz
 RUN mkdir /opt/tomcat
 RUN gzip -V
 RUN tar -xvzf apache-tomcat-8.5.43.tar.gz -C /opt/tomcat --strip-components=1
