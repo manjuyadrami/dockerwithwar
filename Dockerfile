@@ -20,7 +20,7 @@ RUN chgrp -R tomcat /opt/tomcat
 ADD java-tomcat-maven-example.war /opt/tomcat/webapps
 #RUN chown -R tomcat conf/ webapps/ work/ temp/ logs/
 #RUN update-java-alternatives -l
-ENV JAVA_HOME /usr/bin
+ENV JAVA_HOME /usr/
 Run cd /opt/tomcat/bin
 expose 8080
 #CMD /opt/tomcat/bin/catalina.sh run && tail -f /opt/tomcat/logs/catalina.out
